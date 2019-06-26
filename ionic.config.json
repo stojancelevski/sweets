@@ -1,5 +1,7 @@
 {
   "name": "sweetsshop",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

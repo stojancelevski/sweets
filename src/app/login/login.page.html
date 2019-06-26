@@ -1,0 +1,30 @@
+<ion-content padding>
+
+  <img src="../../assets/icon.png" alt="">
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating style="color: #57B847">E-mail</ion-label>
+      <ion-input type="text" #username style="font-family: myfont"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating style="color: #57B847">Password</ion-label>
+      <ion-input type="password" #password style="font-family: myfont"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button block (click)="login()" color="light"> Sign In</ion-button>
+      </ion-col>
+      <ion-col style="text-align: center">
+        <ion-button block (click)="register()" color="medium">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
