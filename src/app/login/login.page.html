@@ -1,30 +1,37 @@
-<ion-content padding>
+<!--<ion-header>-->
+<!--  <ion-toolbar>-->
+<!--    <ion-buttons slot="start">-->
+<!--    </ion-buttons>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
 
-  <img src="../../assets/icon.png" alt="">
-  <ion-list>
-
-    <ion-item>
-      <ion-label floating style="color: #57B847">E-mail</ion-label>
-      <ion-input type="text" #username style="font-family: myfont"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating style="color: #57B847">Password</ion-label>
-      <ion-input type="password" #password style="font-family: myfont"></ion-input>
-    </ion-item>
-
-  </ion-list>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col style="text-align: center">
-        <ion-button block (click)="login()" color="light"> Sign In</ion-button>
-      </ion-col>
-      <ion-col style="text-align: center">
-        <ion-button block (click)="register()" color="medium">Register</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-toolbar color="transparent">
+<!--    <ion-title style="font-family: 'Rage Italic',sans-serif">Sweets shop</ion-title>-->
+</ion-toolbar>
 
 
+<ion-content padding fullscreen> <h1 style="color: white; text-align: center; font-style: italic ; font-size: 2.5rem">Sweet Shop</h1>
+        <img style="display: block; margin: 40px auto" src="../../assets/icon/pie.png" width="100" alt="">
+        <ion-list>
+
+          <ion-item>
+              <ion-label floating style="color: #ffffff">E-mail</ion-label>
+              <ion-input type="text" #username style="font-family: myfont,fantasy"></ion-input>
+          </ion-item>
+
+          <ion-item style="background: transparent">
+              <ion-label floating style="color: #ffffff">Password</ion-label>
+              <ion-input type="password" #password style="font-family: myfont,sans-serif"></ion-input>
+          </ion-item>
+        </ion-list>
+                 <ion-grid>
+                    <ion-row>
+                      <ion-col style="text-align: center">
+                        <ion-button block (click)="login()" color="success"> Sign In</ion-button>
+                      </ion-col>
+                      <ion-col style="text-align: center">
+                        <ion-button block (click)="register()" color="warning">Register</ion-button>
+                      </ion-col>
+                    </ion-row>
+                </ion-grid>
 </ion-content>

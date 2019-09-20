@@ -1,44 +1,81 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Home Page
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
+<ion-toolbar>
+    <ion-title style="font-family: 'Rage Italic',sans-serif">Home About Shop</ion-title>
+</ion-toolbar>
+
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+                <ion-card>
+                    <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
+                    <ion-card-header>
+                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+<!--                        <ion-card-title>Card Title</ion-card-title>-->
+                    </ion-card-header>
+
+<!--                    <ion-card-content>-->
+<!--                        Keep close to Nature's heart... and break clear away, once in awhile,-->
+<!--                        and climb a mountain or spend a week in the woods. Wash your spirit clean.-->
+<!--                    </ion-card-content>-->
+                </ion-card>
+            </ion-col>
+            <ion-col size="6">
+                <ion-card>
+                    <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
+                    <ion-card-header>
+                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+<!--                        <ion-card-title>Card Title</ion-card-title>-->
+                    </ion-card-header>
+
+<!--&lt;!&ndash;                    <ion-card-content>&ndash;&gt;-->
+<!--                        Keep close to Nature's heart... and break clear away, once in awhile,-->
+<!--                        and climb a mountain or spend a week in the woods. Wash your spirit clean.-->
+<!--&lt;!&ndash;                    </ion-card-content>&ndash;&gt;-->
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+        <ion-card>
+            <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
+            <div class="card-title">Chocolate sweets</div>
+            <div class="card-subtitle">5 * ratings </div>
+        </ion-card>
+
+        <ion-card>
+            <img src="http://ukcdn.ar-cdn.com/recipes/originals/0be35403-b71d-433c-b15a-f74ea77262b5.jpg" alt=""/>
+            <div class="card-title">Homemade Crunchie</div>
+            <div class="card-subtitle">5 * ratings </div>
+        </ion-card>
+
+        <ion-card>
+            <img src="https://wereparents.com/wp-content/uploads/2015/11/Sweet-Potato-Pie-3-683x1024.jpg" alt=""/>
+            <div class="card-title">Best homemade sweet potato pie</div>
+            <div class="card-subtitle">5 * ratings</div>
+        </ion-card>
+
+
+        <ion-fab right top>
+            <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+            <ion-fab-list side="left">
+                <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+                <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+                <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+                <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+            </ion-fab-list>
+        </ion-fab>
+
+
 </ion-content>
