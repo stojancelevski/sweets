@@ -4,8 +4,9 @@ import {AlertController, IonRouterOutlet, NavController, Platform, ToastControll
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {Router} from '@angular/router';
-import {Storage} from "@ionic/storage";
-@Component ({
+import {Storage} from '@ionic/storage';
+
+@Component({
     selector: 'app-root',
     templateUrl: 'app.component.html'
 })
@@ -17,6 +18,11 @@ export class AppComponent {
             title: 'Home',
             url: '/home',
             icon: 'home'
+        },
+        {
+            title: 'Shop',
+            url: '/shop',
+            icon: 'cart'
         },
         {
             title: 'Logout',
