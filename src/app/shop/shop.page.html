@@ -3,7 +3,7 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Store</ion-title>
+        <ion-title style="font-family: serif">Store</ion-title>
         <ion-buttons slot="end">
             <ion-button (click)="openCart()">
                 <ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
@@ -17,13 +17,16 @@
 <ion-content>
     <ion-segment scrollable (ionChange)="segmentChanged($event)">
         <ion-segment-button checked value="Milk Chocolate">
-            <ion-icon src="../../assets/icon/milk.svg"></ion-icon>
+            <ion-icon src="../../assets/icon/food.svg"></ion-icon>
+            <ion-label style="color: black">Choco</ion-label>
         </ion-segment-button>
-        <ion-segment-button value="White Choclate">
-            <ion-icon name="heart"></ion-icon>
+        <ion-segment-button value="White Chocolate">
+            <ion-icon src="../../assets/icon/white.svg"></ion-icon>
+            <ion-label style="color: black">White</ion-label>
         </ion-segment-button>
         <ion-segment-button value="Flavored Popcorns">
-            <ion-icon name="pin"></ion-icon>
+            <ion-icon src="../../assets/icon/popcornsss.svg"></ion-icon>
+            <ion-label style="color: black">Popcorn</ion-label>
         </ion-segment-button>
     </ion-segment>
     <div *ngFor="let item of products.products ">
@@ -54,7 +57,7 @@
                 </ion-row>
             </ion-grid>
         </div>
-        <div *ngIf="segment == 'White Choclate'">
+        <div *ngIf="segment == 'White Chocolate'">
             <ion-grid>
                 <ion-row>
                     <ion-col size-sm="4">

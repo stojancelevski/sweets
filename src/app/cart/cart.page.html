@@ -1,21 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+  <ion-toolbar color="transparent">
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/" ></ion-back-button>
     </ion-buttons>
-    <ion-title>My Cart</ion-title>
+    <ion-title style="font-family: serif">My Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list style="background: transparent;">
     <ion-item *ngFor="let item of selectedItems" lines="inset">
       {{ item.count }}x {{ item.name }} - {{ item.price | currency:'USD':'symbol' }}
       <ion-label slot="end" text-right>{{ (item.price * item.count) | currency:'USD':'symbol' }}</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item style="background: transparent; font-family: serif; font-style: oblique; font-size: larger">
       Total: <span slot="end">{{ total | currency:'USD':'symbol' }}</span>
     </ion-item>
   </ion-list>
-  <ion-button expand="block" (click)="buyNow()">Buy Now</ion-button>
+  <ion-button expand="block" (click)="buyNow()" >Buy Now</ion-button>
 </ion-content>
