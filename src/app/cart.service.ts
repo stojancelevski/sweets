@@ -16,7 +16,7 @@ export class CartService {
             ]
         },
         {
-            category: 'White Choclate',
+            category: 'White Chocolate',
             products: [
                 {id: 4, name: 'SNOWBIRDS', price: '15.25', imageurl: 'snowbirds.jpg'},
                 {id: 5, name: 'FLOCK OF BIRDS', price: '30.50', imageurl: 'flockofbirds.jpg'}
