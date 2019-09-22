@@ -3,8 +3,8 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>
-            Home Page
+        <ion-title style="font-style: oblique ; color: darkorange; font-family: serif; font-size: x-large">
+            About
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -13,55 +13,60 @@
 <ion-content>
     <ion-grid>
         <ion-row>
-            <ion-col size="6">
-                <ion-card>
-                    <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
-                    <ion-card-header>
-                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-<!--                        <ion-card-title>Card Title</ion-card-title>-->
+            <ion-col>
+                <ion-card style="font-family: serif">
+                    <img src="../../assets/icon/chocolate_sweets_dessert.jpg" alt="">
+                    <ion-card-header style="background-color: oldlace">
+                        <ion-card-content>We pride ourselves on 100+ handmade candies in white,
+                            milk and dark chocolate. We have 3 generations of experience manufacturing the finest candy
+                     the old-fashioned way, "one piece at a time.</ion-card-content>
+                        <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: x-large">Every piece made with love </ion-card-title>
                     </ion-card-header>
-
-<!--                    <ion-card-content>-->
-<!--                        Keep close to Nature's heart... and break clear away, once in awhile,-->
-<!--                        and climb a mountain or spend a week in the woods. Wash your spirit clean.-->
-<!--                    </ion-card-content>-->
                 </ion-card>
-            </ion-col>
-            <ion-col size="6">
-                <ion-card>
-                    <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
-                    <ion-card-header>
-                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-<!--                        <ion-card-title>Card Title</ion-card-title>-->
+
+                    <ion-card style="font-family: SansSerif">
+                            <img src="../../assets/icon/snowbirds-box.jpg" atl="">
+                        <ion-card-header style="background-color: seashell">
+                            <ion-card-content>
+                                Our trademarked creations have been shipped all over the world.
+                                Each day in our store there is a full tray of Snowbirds ready and waiting for you to sample!
+                            </ion-card-content>
+                            <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: xx-large">Try Our Signature “Snowbirds”</ion-card-title>
+                        </ion-card-header>
+                    </ion-card>
+                <ion-card style="font-family: serif">
+                    <ion-card-header style="background-color: mistyrose">
+                        <img src="../../assets/icon/tasty-sweet.jpg" atl="">
+                        <ion-card-content style="font-size: larger">
+                            We offer holiday specific hand-crafted candies, including chocolate bunnies, chocolate covered strawberries & more!
+                            In the summer we have 12-gourmet hand-scooped flavors from Moomer's Ice Cream, served in homemade waffle cones.
+                            Our specialty caramel apples are a huge hit during the Fall season, but we do make them all year long!
+                        </ion-card-content>
+                        <ion-card-title style="font-size: xx-large; font-style: oblique">Seasonal & Holiday Favorites</ion-card-title>
                     </ion-card-header>
-
-<!--&lt;!&ndash;                    <ion-card-content>&ndash;&gt;-->
-<!--                        Keep close to Nature's heart... and break clear away, once in awhile,-->
-<!--                        and climb a mountain or spend a week in the woods. Wash your spirit clean.-->
-<!--&lt;!&ndash;                    </ion-card-content>&ndash;&gt;-->
                 </ion-card>
+
+
+
+                <ion-slides [options]="slideOpts">
+                        <ion-slides>
+                            <ion-card>
+
+                                <ion-card-header style="background: linen">
+                                    <ion-card-title style="font-size: xx-large; font-style: italic; font-family: 'Felix Titling'"> Satisfied Costumers </ion-card-title>
+                                    <ion-card-content style="font-size: larger">
+                                        By far the best homemade milk chocolate candy, can't wait to eat their boxed milk chocolates and they are all so good!!!
+                                        <ion-card-subtitle style="font-size: larger"> - Rachelle Johnson. </ion-card-subtitle>
+                                    </ion-card-content>
+                                </ion-card-header>
+                            </ion-card>
+                        </ion-slides>
+                </ion-slides>
             </ion-col>
+
         </ion-row>
     </ion-grid>
 
-
-        <ion-card>
-            <img src="https://www.mylittlemoppet.com/wp-content/uploads/2016/08/pb-buckeyes-f3b.jpg" alt=""/>
-            <div class="card-title">Chocolate sweets</div>
-            <div class="card-subtitle">5 * ratings </div>
-        </ion-card>
-
-        <ion-card>
-            <img src="http://ukcdn.ar-cdn.com/recipes/originals/0be35403-b71d-433c-b15a-f74ea77262b5.jpg" alt=""/>
-            <div class="card-title">Homemade Crunchie</div>
-            <div class="card-subtitle">5 * ratings </div>
-        </ion-card>
-
-        <ion-card>
-            <img src="https://wereparents.com/wp-content/uploads/2015/11/Sweet-Potato-Pie-3-683x1024.jpg" alt=""/>
-            <div class="card-title">Best homemade sweet potato pie</div>
-            <div class="card-subtitle">5 * ratings</div>
-        </ion-card>
 
 
         <ion-fab right top>

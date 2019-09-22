@@ -2,3 +2,12 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-content {
+  --background: url(../../assets/icon/beige.jpg) no-repeat center/cover fixed;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}

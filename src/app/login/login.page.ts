@@ -35,11 +35,11 @@ export class LoginPage implements OnInit {
     }
 
     async displayToast(message) {
-        let toast = await this.toastCtrl.create({
-            message: message,
-            duration: 2000
+          const toast = await this.toastCtrl.create({
+                message,
+                duration: 2000
         });
-        toast.present();
+          toast.present();
     }
 
     login() {
