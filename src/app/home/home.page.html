@@ -6,6 +6,12 @@
         <ion-title style="font-style: oblique ; color: darkorange; font-family: serif; font-size: x-large">
             About
         </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="openCart()">
+                <ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+                <ion-icon slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
@@ -19,48 +25,70 @@
                     <ion-card-header style="background-color: oldlace">
                         <ion-card-content>We pride ourselves on 100+ handmade candies in white,
                             milk and dark chocolate. We have 3 generations of experience manufacturing the finest candy
-                     the old-fashioned way, "one piece at a time.</ion-card-content>
-                        <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: x-large">Every piece made with love </ion-card-title>
+                            the old-fashioned way, "one piece at a time.
+                        </ion-card-content>
+                        <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: x-large">
+                            Every piece made with love
+                        </ion-card-title>
                     </ion-card-header>
                 </ion-card>
 
-                    <ion-card style="font-family: SansSerif">
-                            <img src="../../assets/icon/snowbirds-box.jpg" atl="">
-                        <ion-card-header style="background-color: seashell">
-                            <ion-card-content>
-                                Our trademarked creations have been shipped all over the world.
-                                Each day in our store there is a full tray of Snowbirds ready and waiting for you to sample!
-                            </ion-card-content>
-                            <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: xx-large">Try Our Signature “Snowbirds”</ion-card-title>
-                        </ion-card-header>
-                    </ion-card>
+                <ion-card style="font-family: SansSerif">
+                    <img src="../../assets/icon/snowbirds-box.jpg" atl="">
+                    <ion-card-header style="background-color: seashell">
+                        <ion-card-content>
+                            Our trademarked creations have been shipped all over the world.
+                            Each day in our store there is a full tray of Snowbirds ready and waiting for you to sample!
+                        </ion-card-content>
+                        <ion-card-title style="text-transform: full-width; font-style: oblique; font-size: xx-large">Try
+                            Our Signature “Snowbirds”
+                        </ion-card-title>
+                    </ion-card-header>
+                </ion-card>
                 <ion-card style="font-family: serif">
                     <ion-card-header style="background-color: mistyrose">
                         <img src="../../assets/icon/tasty-sweet.jpg" atl="">
                         <ion-card-content style="font-size: larger">
-                            We offer holiday specific hand-crafted candies, including chocolate bunnies, chocolate covered strawberries & more!
-                            In the summer we have 12-gourmet hand-scooped flavors from Moomer's Ice Cream, served in homemade waffle cones.
-                            Our specialty caramel apples are a huge hit during the Fall season, but we do make them all year long!
+                            We offer holiday specific hand-crafted candies, including chocolate bunnies, chocolate
+                            covered strawberries & more!
+                            In the summer we have 12-gourmet hand-scooped flavors from Moomer's Ice Cream, served in
+                            homemade waffle cones.
+                            Our specialty caramel apples are a huge hit during the Fall season, but we do make them all
+                            year long!
                         </ion-card-content>
-                        <ion-card-title style="font-size: xx-large; font-style: oblique">Seasonal & Holiday Favorites</ion-card-title>
+                        <ion-card-title style="font-size: xx-large; font-style: oblique">Seasonal & Holiday Favorites
+                        </ion-card-title>
                     </ion-card-header>
                 </ion-card>
 
 
+                <ion-slides #slides>
+                    <ion-slide>
+                        <ion-card>
 
-                <ion-slides [options]="slideOpts">
-                        <ion-slides>
-                            <ion-card>
-
-                                <ion-card-header style="background: linen">
-                                    <ion-card-title style="font-size: xx-large; font-style: italic; font-family: 'Felix Titling'"> Satisfied Costumers </ion-card-title>
-                                    <ion-card-content style="font-size: larger">
-                                        By far the best homemade milk chocolate candy, can't wait to eat their boxed milk chocolates and they are all so good!!!
-                                        <ion-card-subtitle style="font-size: larger"> - Rachelle Johnson. </ion-card-subtitle>
-                                    </ion-card-content>
-                                </ion-card-header>
-                            </ion-card>
-                        </ion-slides>
+                            <ion-card-header style="background: linen">
+                                <ion-card-title
+                                        style="font-size: xx-large; font-style: italic; font-family: 'Felix Titling'">
+                                    Satisfied Costumers
+                                </ion-card-title>
+                                <ion-card-content style="font-size: larger">
+                                    By far the best homemade milk chocolate candy, can't wait to eat their boxed milk
+                                    chocolates and they are all so good!!!
+                                    <ion-card-subtitle style="font-size: larger"> - Rachelle Johnson.
+                                    </ion-card-subtitle>
+                                </ion-card-content>
+                            </ion-card-header>
+                        </ion-card>
+                    </ion-slide>
+                    <ion-slide>
+                        slide 2
+                    </ion-slide>
+                    <ion-slide>
+                        slide 3
+                    </ion-slide>
+                    <ion-slide>
+                        slide 4
+                    </ion-slide>
                 </ion-slides>
             </ion-col>
 
@@ -68,16 +96,25 @@
     </ion-grid>
 
 
-
-        <ion-fab right top>
-            <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
-            <ion-fab-list side="left">
-                <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-                <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-                <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
-                <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
-            </ion-fab-list>
-        </ion-fab>
+    <ion-fab right top>
+        <button ion-fab color="primary">
+            <ion-icon name="add"></ion-icon>
+        </button>
+        <ion-fab-list side="left">
+            <button ion-fab>
+                <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+            <button ion-fab>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+            <button ion-fab>
+                <ion-icon name="logo-vimeo"></ion-icon>
+            </button>
+            <button ion-fab>
+                <ion-icon name="logo-googleplus"></ion-icon>
+            </button>
+        </ion-fab-list>
+    </ion-fab>
 
 
 </ion-content>

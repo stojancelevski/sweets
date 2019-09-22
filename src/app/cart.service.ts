@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
     providedIn: 'root'
 })
 export class CartService {
-    data = [
+   private data = [
         {
             category: 'Milk Chocolate',
             expanded: true,
@@ -38,10 +38,12 @@ export class CartService {
     }
 
     getProducts() {
-        console.log(this.data);
         return this.data;
     }
 
+    reset(){
+        this.cart = [];
+    }
     getCart() {
         return this.cart;
     }

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuController} from '@ionic/angular';
+import {Router} from '@angular/router';
+import {CartService} from '../cart.service';
 
 
 @Component({
@@ -10,11 +12,15 @@ import {MenuController} from '@ionic/angular';
 
 export class HomePage implements OnInit {
     slideOpts: any;
-
-    constructor(private menu: MenuController) {
+    cart =[];
+    constructor(private menu: MenuController,private router:Router,private cartService: CartService) {
     }
 
     ngOnInit() {
+        this.cart =  this.cartService.getCart();
         this.menu.enable(true);
+    }
+    openCart() {
+        this.router.navigate(['cart']);
     }
 }

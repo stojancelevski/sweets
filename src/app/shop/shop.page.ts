@@ -1,5 +1,6 @@
 import {Component, OnChanges, OnInit} from '@angular/core';
 import {CartService} from '../cart.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-shop',
@@ -8,28 +9,28 @@ import {CartService} from '../cart.service';
 })
 export class ShopPage implements OnInit {
     segment: any;
-    products: any;
+    products: any = [];
+    cart = [];
 
-    constructor(private cartSerivce: CartService) {
-        this.cartSerivce.data.forEach(data => {
-            this.products = data.products;
-        });
-        console.log(this.products);
+    constructor(private cartSerivce: CartService, private router: Router) {
 
-    }
-
-    filter(val: any) {
-        this.cartSerivce.data.filter(data => {
-            data.category = val;
-        });
     }
 
     segmentChanged(ev: any) {
         this.segment = ev.detail.value;
-        console.log(this.segment);
+        this.products = this.cartSerivce.getProducts().find(val => val.category === this.segment);
     }
 
     ngOnInit() {
+        this.cart = this.cartSerivce.getCart();
+    }
+
+    addToCart(product) {
+        this.cartSerivce.addProduct(product);
+    }
+
+    openCart() {
+        this.router.navigate(['cart']);
     }
 
 
